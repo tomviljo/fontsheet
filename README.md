@@ -10,7 +10,7 @@ Example output file:
 
 * Install Go.
 * Clone this repository.
-* Run `go build`
+* Run `go build` inside the repository.
 * Copy `fontsheet` to a directory in your `PATH`, such as `/usr/local/bin`.
 
 ## Usage
@@ -40,6 +40,6 @@ Flags:
 
 The output file has three colors: 0 (the background color, white by default), 1 (reserved for font, black by default) and 2 (grid and placeholder characters, light gray by default).
 
-It consists of tiles of size `--width` times `--height` pixels, with grid lines drawn in the rightmost pixel column and the bottom pixel row. Unless `--strip` is given, grid lines are added to the left and top of the image, and the tiles are therefore offset one pixel to the right and bottom.
+It consists of tiles of size `--width` times `--height` pixels, with grid lines drawn in the rightmost pixel column and the bottom pixel row. Unless `--strip` is given, grid lines are added to the left and top of the image, offsetting the tiles one pixel to the right and bottom.
 
-If `--width` and `--height` allows, and `--no-text` is not given, placeholder characters are inserted using the grid color for characters in the ASCII range. The idea is to manually erase each placeholder and draw the real character with the font color in its place.
+If `--width` and `--height` allows, and `--no-text` is not given, placeholder characters are inserted using the grid color for characters in the ASCII range. The idea is to manually erase each placeholder and draw the real character in its place using the font color.
